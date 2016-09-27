@@ -8,5 +8,7 @@ export function cleanupSvg(svg) {
     .replace(/height="\d+"/, '')
     .replace(/fill="#?\w+"/g, '')
     .replace(/viewBox/, 'fill={color} height={height || size} width={width || size} onClick={onClick} style={style} viewBox')
-    .replace(/\s{2,}/g, ' ');
+    .replace(/\s{2,}/g, ' ')
+    .replace(/xmlns:xlink/g, 'xmlnsXlink')
+    .replace(/xlink:href/g, 'xlinkHref')
 }
