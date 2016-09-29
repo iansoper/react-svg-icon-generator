@@ -32,6 +32,9 @@ module.exports = {
     library: 'library-boilerplate',
     libraryTarget: 'umd'
   },
+  externals: [
+    /^(?!\.|\/).+/i,
+  ],
   plugins: plugins,
   resolve: {
     extensions: ['', '.js']
